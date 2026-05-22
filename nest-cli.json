@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/api-gateway/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/api-gateway/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/api-gateway",
+  "projects": {
+    "api-gateway": {
+      "type": "application",
+      "root": "apps/api-gateway",
+      "entryFile": "main",
+      "sourceRoot": "apps/api-gateway/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/api-gateway/tsconfig.app.json"
+      }
+    },
+    "auth-service": {
+      "type": "application",
+      "root": "apps/auth-service",
+      "entryFile": "main",
+      "sourceRoot": "apps/auth-service/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/auth-service/tsconfig.app.json"
+      }
+    },
+    "incident-service": {
+      "type": "application",
+      "root": "apps/incident-service",
+      "entryFile": "main",
+      "sourceRoot": "apps/incident-service/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/incident-service/tsconfig.app.json"
+      }
+    },
+    "notification-service": {
+      "type": "application",
+      "root": "apps/notification-service",
+      "entryFile": "main",
+      "sourceRoot": "apps/notification-service/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/notification-service/tsconfig.app.json"
+      }
+    },
+    "traffic-service": {
+      "type": "application",
+      "root": "apps/traffic-service",
+      "entryFile": "main",
+      "sourceRoot": "apps/traffic-service/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/traffic-service/tsconfig.app.json"
+      }
+    },
+    "vehicle-service": {
+      "type": "application",
+      "root": "apps/vehicle-service",
+      "entryFile": "main",
+      "sourceRoot": "apps/vehicle-service/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/vehicle-service/tsconfig.app.json"
+      }
+    }
+  }
+}
